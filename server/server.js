@@ -13,7 +13,10 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
+  "http://localhost:3000",
   "http://127.0.0.1:3000",
+  "http://127.0.0.1:5173",
+  "https://shuvidhacounter.store",
   "https://vyapaarbuddy.store"
 ];
 
@@ -48,7 +51,7 @@ app.use('/uploads', express.static('uploads'));
 const axios = require("axios");
 
 
-const SELF_URL = "https://vyapaarbuddy.onrender.com";
+const SELF_URL = process.env.SERVER_URL || "https://shuvidhacounter.onrender.com";
 
 setInterval(() => {
   axios
