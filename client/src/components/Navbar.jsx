@@ -41,7 +41,7 @@ export default function Navbar() {
     <header className="flex items-center justify-between px-8 py-6 bg-white shadow-2xs sticky top-0 z-1">
       <img
         src={assets.logo}
-        alt="VyapaarBuddy Logo"
+        alt="Shuvidha Counter Logo"
         className="h-[55px] pl-15 w-auto cursor-pointer object-contain"
         onClick={() => navigate("/")}
       />

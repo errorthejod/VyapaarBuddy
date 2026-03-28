@@ -1,6 +1,6 @@
-# VyapaarBuddy 🧾 – Business Management & Billing System
+# Shuvidha Counter 🧾 – Business Management & Billing System
 
-VyapaarBuddy is a full-stack business management tool designed to streamline inventory, billing, transaction tracking, and ledger management for small to medium-sized businesses. It offers a customizable, secure, and GST-compliant solution tailored for specific industries like UPVC, retail, and wholesale.
+Shuvidha Counter is a full-stack business management tool designed to streamline inventory, billing, transaction tracking, and ledger management for small to medium-sized businesses. It offers a customizable, secure, and GST-compliant solution tailored for specific industries like UPVC, retail, and wholesale.
 
 ## 🚀 Features
 
@@ -39,8 +39,8 @@ VyapaarBuddy is a full-stack business management tool designed to streamline inv
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/charan-anem-2004/VyapaarBuddy.git
-cd VyapaarBuddy
+git clone https://github.com/errorthejod/ShuvidhaCounter.git
+cd ShuvidhaCounter
 ```
 
 ### Prerequisites
