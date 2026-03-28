@@ -25,14 +25,20 @@ const createTokenAndSend = (user, res) => {
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
   try {
+    // Validate input
+    if (!name || !email || !password) {
+      return res.status(400).json({ error: 'Name, email, and password are required' });
+    }
+
     if (await User.findOne({ email })) {
-      return res.status(400).json({ msg: 'Email already in use' });
+      return res.status(400).json({ error: 'Email already in use' });
     }
     const hash = await bcrypt.hash(password, 10);
     const user = await User.create({ name, email, password: hash });
     createTokenAndSend(user, res);
   } catch (err) {
-    res.status(500).json({ msg: 'Server error' });
+    console.error('Register error:', err);
+    res.status(500).json({ error: 'Server error during registration' });
   }
 });
 
@@ -42,14 +48,15 @@ router.post('/login', async (req, res) => {
   try {
     const user = await User.findOne({ email });
     if (!user || !user.password) {
-      return res.status(400).json({ msg: 'Invalid credentials' });
+      return res.status(400).json({ error: 'Invalid credentials' });
     }
     const ok = await bcrypt.compare(password, user.password);
-    if (!ok) return res.status(400).json({ msg: 'Invalid credentials' });
+    if (!ok) return res.status(400).json({ error: 'Invalid credentials' });
 
     createTokenAndSend(user, res);
   } catch (err) {
-    res.status(500).json({ msg: 'Server error' });
+    console.error('Login error:', err);
+    res.status(500).json({ error: 'Server error during login' });
   }
 });
 
@@ -72,7 +79,7 @@ router.post('/google-login', async (req, res) => {
     createTokenAndSend(user, res);
   } catch (err) {
     console.error("Google Auth Error:", err);
-    res.status(400).json({ msg: 'Google authentication failed' });
+    res.status(400).json({ error: 'Google authentication failed' });
   }
 });
 

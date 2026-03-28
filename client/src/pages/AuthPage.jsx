@@ -25,9 +25,8 @@ export default function AuthPage() {
       toast.success(`Welcome ${data.user.name}`);
       navigate("/account");
     } catch (err) {
-      toast.error(
-        err.response?.data?.error || "Authentication failed, please try again"
-      );
+      const errorMsg = err.response?.data?.error || err.response?.data?.msg || "Authentication failed, please try again";
+      toast.error(errorMsg);
     }
   };
 
