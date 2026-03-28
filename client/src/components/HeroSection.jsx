@@ -17,20 +17,20 @@ const HeroSection = () => {
       <section className="text-center px-6 py-20 pt-35 max-w-5xl mx-auto relative">
         {/* Tagline */}
         <div className="inline-block px-3 py-1 mb-4 rounded-full bg-yellow-200/30 text-yellow-900 text-xs font-medium border-2 border-yellow-300/20">
-          🧠 Your Smart Business Companion
+          🧠 Counter Made Simple
         </div>
 
         {/* Heading */}
         <h1 className="text-6xl sm:text-6xl font-bold leading-snug text-[#1E1E2D] mb-4">
           Simplify Your Business Operations with{" "}
           <span className="text-[#1E1E2D]">
-            Vyapaar<span className="text-[#fabd05]">Buddy</span>
+            Shuvidha<span className="text-[#fabd05]">Counter</span>
           </span>
         </h1>
 
         {/* Subheading */}
         <p className="text-2xl sm:text-lg text-gray-600 max-w-4xs mx-auto mb-8">
-          The all-in-one platform for Indian businesses to manage inventory,
+          The all-in-one counter solution for Indian businesses to manage inventory,
           generate GST invoices, track finances, and grow — all from one
           dashboard.
         </p>

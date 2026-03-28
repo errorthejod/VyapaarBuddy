@@ -10,7 +10,7 @@ const WhytoChoose = () => {
             <h2 className="text-6xl md:text-6xl font-bold text-[#1E1E2D] mb-10">
               Why Choose{" "}
               <span className="text-[#1E1E2D]">
-                Vyapaar<span className="text-[#fabd05]">Buddy</span>?
+                Shuvidha<span className="text-[#fabd05]">Counter</span>?
               </span>
             </h2>
             <ul className="space-y-6 mb-8">

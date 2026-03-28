@@ -12,7 +12,7 @@ export default function TransformBusiness() {
         </h2>
         <p className="text-base sm:text-lg text-gray-300 mb-8">
           Join thousands of Indian businesses already using{" "}
-          <span className="text-[#fabd05] font-medium">VyapaarBuddy</span> to
+          <span className="text-[#fabd05] font-medium">Shuvidha Counter</span> to
           streamline their operations and boost growth.
         </p>
 
